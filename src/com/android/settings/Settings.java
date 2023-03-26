@@ -329,8 +329,6 @@ public class Settings extends SettingsActivity {
     /** Activity to manage app battery usage details. */
     public static class AppBatteryUsageActivity extends SettingsActivity { /* empty */ }
 
-    public static class ManageExternalSourcesActivity extends SettingsActivity {/* empty */ }
-    public static class ManageAppExternalSourcesActivity extends SettingsActivity { /* empty */ }
     public static class WallpaperSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ManagedProfileSettingsActivity extends SettingsActivity { /* empty */ }
     public static class DeletionHelperActivity extends SettingsActivity { /* empty */ }
