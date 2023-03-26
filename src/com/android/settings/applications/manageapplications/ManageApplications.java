@@ -86,7 +86,6 @@ import com.android.settings.R;
 import com.android.settings.Settings;
 import com.android.settings.Settings.GamesStorageActivity;
 import com.android.settings.Settings.HighPowerApplicationsActivity;
-import com.android.settings.Settings.ManageExternalSourcesActivity;
 import com.android.settings.Settings.OverlaySettingsActivity;
 import com.android.settings.Settings.StorageUseActivity;
 import com.android.settings.Settings.UsageAccessSettingsActivity;
@@ -115,7 +114,6 @@ import com.android.settings.applications.appinfo.AlarmsAndRemindersDetails;
 import com.android.settings.applications.appinfo.AppInfoDashboardFragment;
 import com.android.settings.applications.appinfo.AppLocaleDetails;
 import com.android.settings.applications.appinfo.DrawOverlayDetails;
-import com.android.settings.applications.appinfo.ExternalSourcesDetails;
 import com.android.settings.applications.appinfo.ManageExternalStorageDetails;
 import com.android.settings.applications.appinfo.MediaManagementAppsDetails;
 import com.android.settings.applications.appinfo.WriteSettingsDetails;
@@ -303,8 +301,6 @@ public class ManageApplications extends InstrumentedFragment
             reportIfRestrictedSawIntent(intent);
         } else if (className.equals(WriteSettingsActivity.class.getName())) {
             mListType = LIST_TYPE_WRITE_SETTINGS;
-        } else if (className.equals(ManageExternalSourcesActivity.class.getName())) {
-            mListType = LIST_TYPE_MANAGE_SOURCES;
         } else if (className.equals(GamesStorageActivity.class.getName())) {
             mListType = LIST_TYPE_GAMES;
             mSortOrder = R.id.sort_order_size;
@@ -513,8 +509,6 @@ public class ManageApplications extends InstrumentedFragment
                 return SettingsEnums.SYSTEM_ALERT_WINDOW_APPS;
             case LIST_TYPE_WRITE_SETTINGS:
                 return SettingsEnums.SYSTEM_ALERT_WINDOW_APPS;
-            case LIST_TYPE_MANAGE_SOURCES:
-                return SettingsEnums.MANAGE_EXTERNAL_SOURCES;
             case LIST_TYPE_WIFI_ACCESS:
                 return SettingsEnums.CONFIGURE_WIFI;
             case LIST_MANAGE_EXTERNAL_STORAGE:
@@ -628,9 +622,6 @@ public class ManageApplications extends InstrumentedFragment
                 break;
             case LIST_TYPE_WRITE_SETTINGS:
                 startAppInfoFragment(WriteSettingsDetails.class, R.string.write_system_settings);
-                break;
-            case LIST_TYPE_MANAGE_SOURCES:
-                startAppInfoFragment(ExternalSourcesDetails.class, R.string.install_other_apps);
                 break;
             case LIST_TYPE_GAMES:
                 startAppInfoFragment(AppStorageSettings.class, R.string.game_storage_settings);
@@ -941,8 +932,6 @@ public class ManageApplications extends InstrumentedFragment
             screenTitle = R.string.system_alert_window_settings;
         } else if (className.equals(Settings.WriteSettingsActivity.class.getName())) {
             screenTitle = R.string.write_settings;
-        } else if (className.equals(Settings.ManageExternalSourcesActivity.class.getName())) {
-            screenTitle = R.string.install_other_apps;
         } else if (className.equals(Settings.ChangeWifiStateActivity.class.getName())) {
             screenTitle = R.string.change_wifi_state_title;
         } else if (className.equals(Settings.ManageExternalStorageActivity.class.getName())) {
@@ -1658,9 +1647,6 @@ public class ManageApplications extends InstrumentedFragment
                     break;
                 case LIST_TYPE_WRITE_SETTINGS:
                     holder.setSummary(WriteSettingsDetails.getSummary(mContext, entry));
-                    break;
-                case LIST_TYPE_MANAGE_SOURCES:
-                    holder.setSummary(ExternalSourcesDetails.getPreferenceSummary(mContext, entry));
                     break;
                 case LIST_TYPE_WIFI_ACCESS:
                     holder.setSummary(ChangeWifiStateDetails.getSummary(mContext, entry));
