@@ -201,11 +201,6 @@ public class AppInfoDashboardFragment extends DashboardFragment
         pip.setPackageName(packageName);
         pip.setParentFragment(this);
 
-        final ExternalSourceDetailPreferenceController externalSource =
-                use(ExternalSourceDetailPreferenceController.class);
-        externalSource.setPackageName(packageName);
-        externalSource.setParentFragment(this);
-
         final InteractAcrossProfilesDetailsPreferenceController acrossProfiles =
                 use(InteractAcrossProfilesDetailsPreferenceController.class);
         acrossProfiles.setPackageName(packageName);
@@ -217,7 +212,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
         alarmsAndReminders.setParentFragment(this);
 
         use(AdvancedAppInfoPreferenceCategoryController.class).setChildren(Arrays.asList(
-                writeSystemSettings, drawOverlay, pip, externalSource, acrossProfiles,
+                writeSystemSettings, drawOverlay, pip, acrossProfiles,
                 alarmsAndReminders));
 
         final AppLocalePreferenceController appLocale =
