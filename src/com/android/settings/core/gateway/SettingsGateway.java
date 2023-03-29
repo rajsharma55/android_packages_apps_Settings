@@ -84,7 +84,6 @@ import com.android.settings.datausage.DataUsageList;
 import com.android.settings.datausage.DataUsageSummary;
 import com.android.settings.datetime.DateTimeSettings;
 import com.android.settings.deletionhelper.AutomaticStorageManagerSettings;
-import com.android.settings.development.DevelopmentSettingsDashboardFragment;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
 import com.android.settings.deviceinfo.PublicVolumeSettings;
 import com.android.settings.deviceinfo.StorageDashboardFragment;
@@ -238,7 +237,6 @@ public class SettingsGateway {
             TextToSpeechSettings.class.getName(),
             PrivateVolumeForget.class.getName(),
             PublicVolumeSettings.class.getName(),
-            DevelopmentSettingsDashboardFragment.class.getName(),
             AndroidBeam.class.getName(),
             WifiDisplaySettings.class.getName(),
             PowerUsageSummary.class.getName(),
