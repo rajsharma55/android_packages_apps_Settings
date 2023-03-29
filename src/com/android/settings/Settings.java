@@ -192,8 +192,6 @@ public class Settings extends SettingsActivity {
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
 
-    public static class ManageExternalSourcesActivity extends SettingsActivity {/* empty */ }
-    public static class ManageAppExternalSourcesActivity extends SettingsActivity { /* empty */ }
     public static class WallpaperSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ManagedProfileSettingsActivity extends SettingsActivity { /* empty */ }
     public static class DeletionHelperActivity extends SettingsActivity { /* empty */ }
