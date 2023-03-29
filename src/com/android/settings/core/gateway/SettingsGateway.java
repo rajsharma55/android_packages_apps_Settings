@@ -69,7 +69,6 @@ import com.android.settings.datausage.DataUsageList;
 import com.android.settings.datausage.DataUsageSummary;
 import com.android.settings.datetime.DateTimeSettings;
 import com.android.settings.deletionhelper.AutomaticStorageManagerSettings;
-import com.android.settings.development.DevelopmentSettingsDashboardFragment;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
 import com.android.settings.deviceinfo.PrivateVolumeSettings;
 import com.android.settings.deviceinfo.PublicVolumeSettings;
@@ -217,7 +216,6 @@ public class SettingsGateway {
             PrivateVolumeForget.class.getName(),
             PrivateVolumeSettings.class.getName(),
             PublicVolumeSettings.class.getName(),
-            DevelopmentSettingsDashboardFragment.class.getName(),
             AndroidBeam.class.getName(),
             WifiDisplaySettings.class.getName(),
             PowerUsageSummary.class.getName(),
